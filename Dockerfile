@@ -1,6 +1,7 @@
-FROM node:14-alpine
+FROM node:18
 WORKDIR /app
-COPY server.js .
-COPY public/ public/
+COPY package.json /app
+RUN npm install
+COPY . /app
+CMD node server.js
 EXPOSE 8888
-CMD ["node", "server.js"]
