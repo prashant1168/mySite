@@ -1,32 +1,28 @@
 var express = require('express');
-var path=require('path');
+var path = require('path');
 var app = express();
 
-//server configuration
-app.use(express.static(path.join(__dirname,'public')));
+// server configuration
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', function (req, res) {
-    res.sendFile(path.join(___dirname + '/Index.html'));
- });
- app.get('/login', function (req, res) {
-    res.sendFile(path.join(___dirname + '/login.html'));
- });
- app.get('/About', function (req, res) {
-    res.sendFile(path.join(___dirname + '/About.html'));
- });
- app.get('/Contact', function (req, res) {
-    res.sendFile(path.join(___dirname + '/Contact.html'));
- });
+    res.sendFile(path.join(__dirname, 'public', 'Index.html'));
+});
 
-app.get('/hello', function (req, res) {
-    var person={firstName:'Ravi',lastName:'Tambade',age:47};
-    res.send(person);
+app.get('/login', function (req, res) {
+    res.sendFile(path.join(__dirname, 'public', 'login.html'));
+});
+
+app.get('/About', function (req, res) {
+    res.sendFile(path.join(__dirname, 'public', 'About.html'));
+});
+
+app.get('/Contact', function (req, res) {
+    res.sendFile(path.join(__dirname, 'public', 'Contact.html'));
 });
 
 var server = app.listen(8888, function () {
-    var host = server.address().address
-    var port = server.address().port
-    console.log("Example app listening at http://localhost:8888", host, port)
+    var host = server.address().address;
+    var port = server.address().port;
+    console.log("Example app listening at http://localhost:8888", host, port);
 });
-
-  
