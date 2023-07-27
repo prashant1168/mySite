@@ -1,0 +1,32 @@
+Commands for docker and git
+Sudo apt update
+
+Docker
+Sudo apt install docker.io
+Sudo docker build -t image name .
+Sudo docker run -d -p port:server port image name
+
+Sudo docker stop container I'd
+
+Container I'd: sudo docker ps
+Docker image: sudo docker images
+Docker status: sudo systemctl status docker
+
+Node js
+
+Sudo apt install nodejs
+Sudo apt install mom
+Non install express
+Node server.js
+
+
+Got push
+
+Git init
+Git add filename
+Git status
+Git commit m firstcommit
+Git remote add origin url
+Git push origin main/master
+
+Git clone repositoryurl
